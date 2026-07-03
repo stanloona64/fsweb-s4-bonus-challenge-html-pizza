@@ -10,17 +10,51 @@
   </head>
 
   <body>
-    <div id="app">
+  <!-- Header Bölümü -->
+    <header>
       <div>
-        <a href="https://github.com/Workintech/fsweb-s5-bonus-challenge-html-pizza" target="_blank">
-          <img src="./workintech.svg" class="logo" alt="Workintech logo">
-        </a>
-        <h1>Hello Coder!</h1>
-        <p class="read-the-docs">
-          Click on the Workintech logo to see the Readme of the project
-        </p>
+        <h3>Teknolojik Yemekler</h3>
+        <p>fırsatı kaçırma</p>
+        <h1>KOD ACIKTIRIR</h1>
+        <h1>PİZZA, DOYURUR</h1>
+        <button>ACIKTIM</button>
       </div>
-    </div>
+    </header>
+
+    <main>
+      <!-- Üst Menü Formu (Kore, Pizza, Burger vb.) -->
+      <section id="category-selection">
+        <form id="filter-form">
+          <div class="category-buttons">
+            <button type="button">YENİ! Kore</button>
+            <button type="button">Pizza</button>
+            <button type="button">Burger</button>
+            <button type="button">Kızartmalar</button>
+            <button type="button">Fast Food</button>
+            <button type="button">Gazlı İçecek</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- Benzer Lezzetler/Kartlar Bölümü -->
+      <section id="menu-items">
+        <h2>Acıktıran Kodlara Doyuran Lezzetler</h2>
+        <div class="product-grid">
+          <!-- Buraya pizza/burger kartlarını div olarak ekleyebilirsin -->
+          <div class="card">Terminal Pizza</div>
+          <div class="card">Position Absolute Acı Pizza</div>
+          <div class="card">useEffect Tavuklu Burger</div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Bölümü -->
+    <footer>
+      <div class="footer-content">
+        <h3>Teknolojik Yemekler</h3>
+        <p>Adres bilgileri ve iletişim...</p>
+      </div>
+    </footer>
   </body>
 
 </html>
