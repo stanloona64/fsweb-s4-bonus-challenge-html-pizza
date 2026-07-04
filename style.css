@@ -13,26 +13,205 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
-h3 {
-  width: 363;
-  height: 50;
-  top: 56px;
-  left: 778px;
-  opacity: 1;
-  font-family: Condensed;
-  font-weight: 400;
-  font-style: Regular;
-  font-size: 50px;
-  line-height: 50px;
-  letter-spacing: 0%;
-  text-align: center;
-  vertical-align: middle;
-  text-transform: capitalize;
-  color: #FFFFFF;
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #efefef;
+}
+header {
+  background-image: url('./public/assets/iteration-1/home-banner.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
 }
 header div{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+header div h1, 
+header div p, 
+header div button {
+  margin: 0;
+  padding: 0;
+}
+header div p {
+  color: rgb(238, 197, 101);
+  font-family: 'Satisfy', cursive;
+  font-size: 20px;
+}
+header div h1 {
+  color: white;
+  font-size: 50px;
+  text-align: center;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 300;
+}
+header div button {
+  background-color: rgb(243, 172, 8);
+  color: black;
+  border: none;
+  padding: 10px 40px;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 400;
+  border-radius: 20px;
+}
+header div button:hover {
+  background-color: rgb(200, 150, 50);
+}
+header img {
+  margin: 20px;
+}
+#category-selection {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 15px;
+  background-color: white;
+}
+.category-buttons {
+  display: flex;        /* Butonları yan yana dizer */
+  flex-direction: row;  /* Yatay dizilimi zorunlu kılar */
+  justify-content: center; /* Ortalar */
+  align-items: center;  /* Dikeyde ortalar */           /* Butonlar arasında boşluk bırakır */
+}
+.category-buttons button {           
+  background: none;
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: border 0.3s ease;
+  display: flex;
+  align-items: center; /* İkon ve metni dikeyde tam merkeze alır */
+  justify-content: center;
+  flex-direction: row;
+}
+.category-buttons button span {
+  margin-left: 8px;
+  color: #333;
+}
+.category-buttons button img {
+  width: 24px;
+  height: 24px;
+}
+.category-buttons button:hover {
+  border: 1px solid #333; 
+  border-radius: 5px;
+}
+
+#slogan {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#slogan p, 
+#slogan h2 {
+  margin: 0;
+  padding: 0;
+  color: black;
+}
+#slogan p {
+  font-family: 'Satisfy', cursive;
+  font-size: 20px;
+  color: red;
+}
+#slogan h2 {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 500;
+  font-size: 35px;
+}
+#category-selection.mid-category-buttons {
+  background-color: transparent;;
+}
+#category-selection.mid-category-buttons button {
+  border: 1px solid white;
+  border-radius: 140px;
+  margin: 0 5px;
+  background-color: white;
+  transition: border 0.3s ease;
+}
+#category-selection.mid-category-buttons button:hover {
+  border: 1px solid white;
+  background-color: #252526;
+}
+#category-selection.mid-category-buttons button:hover,
+#category-selection.mid-category-buttons button:hover span {
+  color: white;
+}
+.panel-content {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 50px auto;
+}
+
+.panel-right {
+  display: flex;
+  flex-direction: column; 
+  gap: 20px;
+}
+
+.panel-card-1, .panel-card-2, .panel-card-3 {
+  background-size: cover;
+  background-position: center;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.panel-card-1 { background-image: url('./public/assets/iteration-2/cta/kart-1.png'); width: 500px; height: 408px; }
+.panel-card-2 { background-image: url('./public/assets/iteration-2/cta/kart-2.png'); width: 400px; height: 165px; }
+.panel-card-3 { background-image: url('./public/assets/iteration-2/cta/kart-3.png'); width: 400px; height: 165px; }
+
+button {
+  background-color: white;
+  color: red;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 30px;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 700;
+}
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 3000px;
+  margin: 50px auto;
+  gap: 20px;
+}
+.card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  color: black;
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-desc {
+  display: flex;        
+  justify-content: center;   
+  gap: 15px;
+  margin: 0;
+}
+.card-desc p {
+  margin: 0;
+}
+.average-star {
+  margin-right: 40px;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px black;
 }
