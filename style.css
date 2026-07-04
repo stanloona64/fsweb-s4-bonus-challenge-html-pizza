@@ -38,7 +38,7 @@ header div button {
   padding: 0;
 }
 header div p {
-  color: rgb(238, 197, 101);
+  color: #FDC913;
   font-family: 'Satisfy', cursive;
   font-size: 20px;
 }
@@ -50,7 +50,7 @@ header div h1 {
   font-weight: 300;
 }
 header div button {
-  background-color: rgb(243, 172, 8);
+  background-color: #FDC913;
   color: black;
   border: none;
   padding: 10px 40px;
@@ -81,10 +81,10 @@ header img {
 }
 .category-buttons button {           
   background: none;
-  border: 1px solid #ccc;
+  border: 0.1rem solid #ccc;
   padding: 10px 15px;
   cursor: pointer;
-  border: 1px solid transparent;
+  border: 0.1rem solid transparent;
   transition: border 0.3s ease;
   display: flex;
   align-items: center; /* İkon ve metni dikeyde tam merkeze alır */
@@ -100,8 +100,7 @@ header img {
   height: 24px;
 }
 .category-buttons button:hover {
-  border: 1px solid #333; 
-  border-radius: 5px;
+  border: 0.1rem solid #333; 
 }
 
 #slogan {
@@ -119,7 +118,7 @@ header img {
 #slogan p {
   font-family: 'Satisfy', cursive;
   font-size: 20px;
-  color: red;
+  color: #CE2829;
 }
 #slogan h2 {
   font-family: 'Barlow', sans-serif;
@@ -151,7 +150,19 @@ header img {
   max-width: 1200px;
   margin: 50px auto;
 }
-
+.panel-card-1 h2 {
+  font-family:'Quattrocento', serif; 
+  font-weight: 700; 
+  font-style: normal; 
+  font-size: 40px; 
+  color: white;
+}
+.panel-card-1 p,
+.panel-card-1 h2,
+.panel-card-3 button {
+  margin: 0;
+  padding-bottom: 10px;
+}
 .panel-right {
   display: flex;
   flex-direction: column; 
@@ -171,13 +182,17 @@ header img {
 
 button {
   background-color: white;
-  color: red;
+  color: #CE2829;
   border: none;
   padding: 10px 20px;
   cursor: pointer;
   border-radius: 30px;
   font-family: 'Barlow', sans-serif;
   font-weight: 700;
+}
+.panel-content button:hover {
+  background-color: #292929;
+  color: white;
 }
 .product-grid {
   display: flex;
@@ -195,9 +210,12 @@ button {
   color: black;
   display: flex; 
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card p {
+  display: flex; flex-direction: column; align-items: flex-start;
 }
 .card-desc {
   display: flex;        
@@ -208,10 +226,59 @@ button {
 .card-desc p {
   margin: 0;
 }
-.average-star {
-  margin-right: 40px;
-}
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 4px 8px black;
+}
+footer {
+  background-color: #292929;
+  color: white;
+  padding: 20px;
+}
+#footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+.footer-links, .footer-menu {
+  text-align: left;
+}
+.footer-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.footer-links a{
+  color: #FAF7F2;
+  text-decoration: none;
+  padding: 10px 0;
+}
+.footer-links a:hover {
+  text-decoration: underline;
+}
+.footer-links {
+  padding-bottom: 100px;
+  margin: 0;
+}
+.footer-menu {
+  padding-bottom: 30px;
+  margin: 0;
+}
+.footer-menu li {
+  padding: 5px 0;
+  color: #FAF7F2;
+}
+.instagram-feed {
+  padding-bottom: 55px;
+  margin: 0;
+}
+.footer-bottom {
+  color: white;
+  text-align: center;
+}
+.footer-divider {
+  border-top: 0.1rem solid #5F5F5F;
+  width: 100%;                  /* Sayfa boyunca uzanmasını sağlar */
 }
