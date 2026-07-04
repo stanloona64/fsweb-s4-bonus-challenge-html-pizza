@@ -41,7 +41,7 @@ header div button {
   padding: 0;
 }
 header div p {
-  color: #FDC913;
+  color: rgb(238, 197, 101);
   font-family: 'Satisfy', cursive;
   font-size: 1.25rem;
 }
@@ -53,7 +53,7 @@ header div h1 {
   font-weight: 300;
 }
 header div button {
-  background-color: #FDC913;
+  background-color: rgb(243, 172, 8);
   color: black;
   border: none;
   padding: 0.625rem 2.5rem;
@@ -86,9 +86,9 @@ header img {
 .category-buttons button {           
   background: none;
   border: 0.1rem solid #ccc;
-  padding: 0.625rem 0.9375rem;
+  padding: 10px 15px;
   cursor: pointer;
-  border: 0.1rem solid transparent;
+  border: 1px solid transparent;
   transition: border 0.3s ease;
   display: flex;
   align-items: center;
@@ -104,10 +104,34 @@ header img {
   height: 1.5rem;
 }
 .category-buttons button:hover {
-  border: 0.1rem solid #333; 
+  border: 1px solid #333; 
+  border-radius: 5px;
 }
-.mid-category-buttons {
-  background-color: transparent;
+
+#slogan {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#slogan p, 
+#slogan h2 {
+  margin: 0;
+  padding: 0;
+  color: black;
+}
+#slogan p {
+  font-family: 'Satisfy', cursive;
+  font-size: 20px;
+  color: #CE2829;
+}
+#slogan h2 {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 500;
+  font-size: 35px;
+}
+#category-selection.mid-category-buttons {
+  background-color: transparent;;
 }
 .mid-category-buttons button {
   border: 0.0625rem solid white;
@@ -136,14 +160,14 @@ header img {
   font-family:'Quattrocento', serif; 
   font-weight: 700; 
   font-style: normal; 
-  font-size: 2.5rem; 
+  font-size: 40px; 
   color: white;
 }
 .panel-card-1 p,
 .panel-card-1 h2,
 .panel-card-3 button {
   margin: 0;
-  padding-bottom: 0.625rem;
+  padding-bottom: 10px;
 }
 .panel-right {
   display: flex;
@@ -164,7 +188,7 @@ header img {
 
 button {
   background-color: white;
-  color: #CE2829;
+  color: red;
   border: none;
   padding: 0.625rem 1.25rem;
   cursor: pointer;
@@ -176,30 +200,6 @@ button {
   background-color: #292929;
   color: white;
 }
-
-.slogan {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.slogan p, 
-.slogan h2 {
-  margin: 0;
-  padding: 0;
-  color: black;
-}
-.slogan p {
-  font-family: 'Satisfy', cursive;
-  font-size: 1.25rem;
-  color: #CE2829;
-}
-.slogan h2 {
-  font-family: 'Barlow', sans-serif;
-  font-weight: 500;
-  font-size: 2.1875rem;
-}
-
 .product-grid {
   display: flex;
   flex-wrap: wrap;
@@ -216,12 +216,9 @@ button {
   color: black;
   display: flex; 
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.card p {
-  display: flex; flex-direction: column; align-items: flex-start;
 }
 .card-desc {
   display: flex;        
@@ -232,6 +229,9 @@ button {
 .card-desc p {
   margin: 0;
 }
+.average-star {
+  margin-right: 40px;
+}
 .card:hover {
   transform: translateY(-0.3125rem);
   box-shadow: 0 0.25rem 0.5rem black;
@@ -239,13 +239,13 @@ button {
 footer {
   background-color: #292929;
   color: white;
-  padding: 1.25rem;
+  padding: 20px;
 }
-.footer-content {
+#footer-content {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2.5rem;
+  gap: 40px;
 }
 .footer-links, .footer-menu {
   text-align: left;
@@ -253,31 +253,31 @@ footer {
 .footer-item {
   display: flex;
   align-items: center;
-  gap: 0.625rem;
-  margin-bottom: 0.625rem;
+  gap: 10px;
+  margin-bottom: 10px;
 }
 .footer-links a{
   color: #FAF7F2;
   text-decoration: none;
-  padding: 0.625rem 0;
+  padding: 10px 0;
 }
 .footer-links a:hover {
   text-decoration: underline;
 }
 .footer-links {
-  padding-bottom: 6.25rem;
+  padding-bottom: 100px;
   margin: 0;
 }
 .footer-menu {
-  padding-bottom: 1.875rem;
+  padding-bottom: 30px;
   margin: 0;
 }
 .footer-menu li {
-  padding: 0.3125rem 0;
+  padding: 5px 0;
   color: #FAF7F2;
 }
 .instagram-feed {
-  padding-bottom: 3.4375rem;
+  padding-bottom: 55px;
   margin: 0;
 }
 .footer-bottom {
@@ -286,25 +286,5 @@ footer {
 }
 .footer-divider {
   border-top: 0.1rem solid #5F5F5F;
-  width: 100%;
-}
-
-@media screen and (max-width: 1024px) {
-  html {
-    font-size: 93.75%; /* ~15px */
-  }
-}
-
-/* Büyük mobil / küçük tablet (≤768px) */
-@media screen and (max-width: 768px) {
-  html {
-    font-size: 87.5%; /* ~14px */
-  }
-}
-
-/* Mobil (≤480px) */
-@media screen and (max-width: 480px) {
-  html {
-    font-size: 81.25%; /* ~13px */
-  }
+  width: 100%;                  /* Sayfa boyunca uzanmasını sağlar */
 }
