@@ -13,9 +13,6 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
-html {
-  font-size: 100%; /* 16px - masaüstü varsayılan */
-}
 body {
   margin: 0;
   padding: 0;
@@ -41,7 +38,7 @@ header div button {
   padding: 0;
 }
 header div p {
-  color: rgb(238, 197, 101);
+  color: #FDC913;
   font-family: 'Satisfy', cursive;
   font-size: 1.25rem;
 }
@@ -53,7 +50,7 @@ header div h1 {
   font-weight: 300;
 }
 header div button {
-  background-color: rgb(243, 172, 8);
+  background-color: #FDC913;
   color: black;
   border: none;
   padding: 0.625rem 2.5rem;
@@ -69,8 +66,7 @@ header div button:hover {
 header img {
   margin: 1.25rem;
 }
-
-.category-selection {
+#category-selection {
   display: flex;
   justify-content: center;
   margin: 0 auto;
@@ -86,9 +82,9 @@ header img {
 .category-buttons button {           
   background: none;
   border: 0.1rem solid #ccc;
-  padding: 10px 15px;
+  padding: 0.625rem 0.9375rem;
   cursor: pointer;
-  border: 1px solid transparent;
+  border: 0.1rem solid transparent;
   transition: border 0.3s ease;
   display: flex;
   align-items: center;
@@ -104,8 +100,7 @@ header img {
   height: 1.5rem;
 }
 .category-buttons button:hover {
-  border: 1px solid #333; 
-  border-radius: 5px;
+  border: 0.1rem solid #333; 
 }
 
 #slogan {
@@ -122,33 +117,32 @@ header img {
 }
 #slogan p {
   font-family: 'Satisfy', cursive;
-  font-size: 20px;
+  font-size: 1.25rem;
   color: #CE2829;
 }
 #slogan h2 {
   font-family: 'Barlow', sans-serif;
   font-weight: 500;
-  font-size: 35px;
+  font-size: 2.1875rem;
 }
 #category-selection.mid-category-buttons {
-  background-color: transparent;;
+  background-color: transparent;
 }
-.mid-category-buttons button {
+#category-selection.mid-category-buttons button {
   border: 0.0625rem solid white;
   border-radius: 8.75rem;
   margin: 0 0.3125rem;
   background-color: white;
   transition: border 0.3s ease;
 }
-.mid-category-buttons button:hover {
+#category-selection.mid-category-buttons button:hover {
   border: 0.0625rem solid white;
   background-color: #252526;
 }
-.mid-category-buttons button:hover,
-.mid-category-buttons button:hover span {
+#category-selection.mid-category-buttons button:hover,
+#category-selection.mid-category-buttons button:hover span {
   color: white;
 }
-
 .panel-content {
   display: flex;
   justify-content: center;
@@ -160,14 +154,14 @@ header img {
   font-family:'Quattrocento', serif; 
   font-weight: 700; 
   font-style: normal; 
-  font-size: 40px; 
+  font-size: 2.5rem; 
   color: white;
 }
 .panel-card-1 p,
 .panel-card-1 h2,
 .panel-card-3 button {
   margin: 0;
-  padding-bottom: 10px;
+  padding-bottom: 0.625rem;
 }
 .panel-right {
   display: flex;
@@ -188,7 +182,7 @@ header img {
 
 button {
   background-color: white;
-  color: red;
+  color: #CE2829;
   border: none;
   padding: 0.625rem 1.25rem;
   cursor: pointer;
@@ -216,9 +210,12 @@ button {
   color: black;
   display: flex; 
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card p {
+  display: flex; flex-direction: column; align-items: flex-start;
 }
 .card-desc {
   display: flex;        
@@ -229,9 +226,6 @@ button {
 .card-desc p {
   margin: 0;
 }
-.average-star {
-  margin-right: 40px;
-}
 .card:hover {
   transform: translateY(-0.3125rem);
   box-shadow: 0 0.25rem 0.5rem black;
@@ -239,13 +233,13 @@ button {
 footer {
   background-color: #292929;
   color: white;
-  padding: 20px;
+  padding: 1.25rem;
 }
 #footer-content {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 40px;
+  gap: 2.5rem;
 }
 .footer-links, .footer-menu {
   text-align: left;
@@ -253,38 +247,62 @@ footer {
 .footer-item {
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 10px;
+  gap: 0.625rem;
+  margin-bottom: 0.625rem;
 }
 .footer-links a{
   color: #FAF7F2;
   text-decoration: none;
-  padding: 10px 0;
+  padding: 0.625rem 0;
 }
 .footer-links a:hover {
   text-decoration: underline;
 }
 .footer-links {
-  padding-bottom: 100px;
+  padding-bottom: 6.25rem;
   margin: 0;
 }
 .footer-menu {
-  padding-bottom: 30px;
+  padding-bottom: 1.875rem;
   margin: 0;
 }
 .footer-menu li {
-  padding: 5px 0;
+  padding: 0.3125rem 0;
   color: #FAF7F2;
 }
 .instagram-feed {
-  padding-bottom: 55px;
+  padding-bottom: 3.4375rem;
   margin: 0;
 }
 .footer-bottom {
   color: white;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 650px;
 }
 .footer-divider {
   border-top: 0.1rem solid #5F5F5F;
-  width: 100%;                  /* Sayfa boyunca uzanmasını sağlar */
+  width: 100%;
+}
+/* Tablet (≤1024px) */
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 93.75%; /* ~15px */
+  }
+}
+
+/* Büyük mobil / küçük tablet (≤768px) */
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 87.5%; /* ~14px */
+  }
+}
+
+/* Mobil (≤480px) */
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 81.25%; /* ~13px */
+  }
 }
