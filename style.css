@@ -42,12 +42,17 @@ header div p {
   font-family: 'Satisfy', cursive;
   font-size: 1.25rem;
 }
+h1 span {
+  display: inline;
+}
 header div h1 {
   color: white;
   font-size: 3.125rem;
   text-align: center;
   font-family: 'Barlow', sans-serif;
   font-weight: 300;
+  max-width: 400px; 
+  line-height: 1.2;
 }
 header div button {
   background-color: #FDC913;
@@ -215,7 +220,9 @@ button {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .card p {
-  display: flex; flex-direction: column; align-items: flex-start;
+  display: flex; 
+  flex-direction: column; 
+  align-items: flex-start;
 }
 .card-desc {
   display: flex;        
@@ -304,5 +311,84 @@ footer {
 @media screen and (max-width: 480px) {
   html {
     font-size: 81.25%; /* ~13px */
+  }
+  html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Yatay kaydırmayı engeller */
+  width: 100%;
+  }
+  header div {
+    max-width: 100%;
+    min-height: 60vh;
+  }
+  header div h1 {
+    font-size: 3rem;
+    display: flex;
+    flex-direction: column; /* Kelimeleri alt alta dizer */
+    align-items: center; 
+  }
+  h1 span {
+    display: block; /* Her span'i alt alta getirir */
+  }
+  header div p {
+    display: none;
+  }
+  header div button {
+    margin-top: 1rem;
+    padding: 0.5rem 2rem;
+    font-size: 1.5rem;
+  }
+  header img {
+    margin: 1.5rem;
+    max-width: 50%;
+  }
+  .category-buttons {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .category-buttons button {
+    flex: 1 1 calc(50% - 20px);
+    min-width: 120px;
+    padding: 0.5rem 0.8rem;
+    justify-content: flex-start; 
+    text-align: left;
+  }
+  .panel-content {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .panel-card-1, .panel-card-2, .panel-card-3 {
+    display: flex; 
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #slogan h2 {
+    text-align: center;
+  }
+  #footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+    padding-left: 1.25rem;
+  }
+  .footer-item {
+    flex-direction: row !important;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .footer-links, .footer-menu, .instagram-feed{
+    padding-bottom: 1rem;
+    width: 100%;
+    text-align: left;
+  }
+  .footer-links .footer-item:first-child img {
+    height: 150px;
+    width: 150px;
+  }
+  .footer-bottom {
+    gap: 10rem;
   }
 }
